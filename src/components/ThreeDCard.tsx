@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState, useRef } from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { motion, useInView } from "framer-motion";
-import SpringModal from "./ProjectModal";
+
 
 
 const cardDataList = [
@@ -35,15 +35,7 @@ export function ThreeDCard() {
   const headingRef = useRef(null);
   const isHeadingInView = useInView(headingRef, { once: true });
 
-  // Function to open the modal with the selected project
-  const openModal = (project: any) => {
-    setSelectedProject(project);
-  };
 
-  
-  const closeModal = () => {
-    setSelectedProject(null);
-  };
 
   return (
     <div>
@@ -120,15 +112,6 @@ export function ThreeDCard() {
           </CardContainer>
         ))}
       </div>
-
-      {/* Modal for Case Study */}
-      {selectedProject && (
-        <SpringModal
-          isOpen={!!selectedProject}
-          setIsOpen={closeModal}
-          project={selectedProject} // Pass the project data to the modal
-        />
-      )}
     </div>
   );
 }
