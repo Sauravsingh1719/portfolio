@@ -1,4 +1,4 @@
-"use client"; // Marking this as a client component
+"use client";
 
 import { Canvas } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";

@@ -32,34 +32,16 @@ export const Writing = () => {
       <section className="bg-transparent p-4 md:p-8 ">
         <div className="mx-auto max-w-5xl">
           <Link
-            heading="First"
-            subheading="Learn what we do here"
-            imgSrc="/images/gym.png"
-            href="#"
+            heading="LIFE AS A GAME"
+            subheading="Learning from Life’s Failures: How Challenges Have Taught Me to Always Give My Best Effort"
+            imgSrc="/images/writing/1.png"
+            href="https://medium.com/@sauravs1719/life-as-a-game-7a5c80c8a3da"
           />
           <Link
-            heading="Second"
-            subheading="We work with great people"
-            imgSrc="/images/gym.png"
-            href="#"
-          />
-          <Link
-            heading="Third"
-            subheading="Our work speaks for itself"
-            imgSrc="/images/gym.png"
-            href="#"
-          />
-          <Link
-            heading="Fourth"
-            subheading="We want cool people"
-            imgSrc="/images/gym.png"
-            href="#"
-          />
-          <Link
-            heading="Fifth"
-            subheading="In case you're bored"
-            imgSrc="/images/gym.png"
-            href="#"
+            heading="IN THE GAME, I FIND ME"
+            subheading="Discovering Inner Clarity and Strength: How Sports Help Us Find Ourselves Amid Life’s Chaos "
+            imgSrc="/images/writing/2.png"
+            href="https://medium.com/@sauravs1719/in-the-game-i-find-me-ac4ab3436457"
           />
         </div>
       </section>

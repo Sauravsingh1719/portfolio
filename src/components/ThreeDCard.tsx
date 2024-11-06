@@ -3,27 +3,31 @@ import Image from "next/image";
 import React, { useState, useRef } from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 
 
 
 const cardDataList = [
   {
-    title: "Make things float in air",
-    description: "Hover over this card to unleash the power of CSS perspective",
+    title: "First Portfolio",
+    description: "My First Portfolio Project",
     imageUrl: "/images/portfolio.png",
-    projectLink: "/projects/123",
+    projectLink: "/Portfolio",
+    link: "https://saurav160.netlify.app/"
   },
   {
-    title: "Interactive 3D UI",
-    description: "Engage users with an immersive 3D user experience.",
+    title: "Data To Grow",
+    description: "Data to Grow Website",
     imageUrl: "/images/dtg.png",
-    projectLink: "/projects/124",
+    projectLink: "/Dtg",
+    link: "https://dtg-five.vercel.app/ "
   },
   {
     title: "The Fitness Centre",
-    description: "Create beautiful and dynamic designs with modern CSS techniques.",
+    description: "Stunning responsive website for the fitness center",
     imageUrl: "/images/gym.png",
-    projectLink: "/projects/125",
+    projectLink: "/Tfc",
+    link: "https://tfc1.netlify.app/"
   },
 ];
 
@@ -93,19 +97,21 @@ export function ThreeDCard() {
 
               {/* Case Study Button */}
               <div className="flex justify-between items-center mt-20">
-                <CardItem
+              <CardItem
                   translateZ={20}
                   as="button"
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                 >
-                  <a href="/CaseStudy">Case Study</a>
+                  <a href={cardData.projectLink}>
+                    Case Study
+                  </a>
                 </CardItem>
                 <CardItem
                   translateZ={20}
                   as="button"
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                 >
-                  <a href="https://dtg-five.vercel.app/">Live Preview</a>
+                  <a href={cardData.link}>Live Preview</a>
                 </CardItem>
               </div>
             </CardBody>

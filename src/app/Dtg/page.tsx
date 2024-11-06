@@ -15,9 +15,9 @@ const Page = () => {
   const [isOpen, setIsOpen] = useState(false);
  
   return (
-    <div className="mx-4 my-20 lg:mx-60 lg:my-20 sm:mx-10 sm:my-20 text-white p-5">
+    <div className="bg-slate-950 border-white/[0.2] rounded-lg mx-4 my-20 lg:mx-60 lg:my-20 sm:mx-10 sm:my-20 text-white p-8">
       
-      
+
       <div>
         <h1 className="font-extrabold text-5xl py-8">Case Study: Data to Grow</h1>
         <hr />
@@ -211,6 +211,13 @@ const Page = () => {
         <p className="text-lg">
           The “Data to Grow” website provides a comprehensive platform for client interaction, knowledge sharing, and business growth. The responsive frontend and secure backend create an efficient system that meets both user and admin needs.
         </p>
+      </div>
+      <div>
+        <a href='https://dtg-five.vercel.app/'>
+        <button className='bg-tansparent rounded-lg shadow-md shadow-cyan-200 p-2'>
+          Live Preview
+        </button>
+        </a>
       </div>
       
     </div>

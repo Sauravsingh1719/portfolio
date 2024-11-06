@@ -8,7 +8,7 @@ export const RevealLinks = () => {
       <FlipLink href="#">Linkedin</FlipLink>
       <FlipLink href="#">Github</FlipLink>
       <FlipLink href="#">Instagram</FlipLink>
-      <FlipLink href="#">Medium</FlipLink>
+      <FlipLink href="https://medium.com/@sauravs1719">Medium</FlipLink>
     </section>
   );
 };
