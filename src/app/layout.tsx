@@ -4,6 +4,8 @@ import "./globals.css";
 import { NavbarDemo } from "@/components/Navbar";
 import { AuroraHero } from "@/components/AuroraHero";
 import Contact from "@/components/Contact";
+import { ThemeProvider } from "@/components/theme-provider"
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,11 +33,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AuroraHero /> {/* Global Aurora background here */}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <AuroraHero /> {/* Global Aurora background here */}
         <div className="relative z-10"> {/* Ensure content is above the background */}
           <NavbarDemo />
           {children}
         </div>
+          </ThemeProvider>
+        
       </body>
     </html>
   );

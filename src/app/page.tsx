@@ -6,25 +6,25 @@ import { ThreeDCard } from '@/components/ThreeDCard';
 import { Writing } from '@/components/Writing';
 import { NavbarDemo } from '@/components/Navbar';
 import React, { useRef } from 'react';
+import { ModeToggle } from '@/components/Theme';
 
 const Page = () => {
   // Create a ref for the Contact section
   const contactRef = useRef<HTMLDivElement | null>(null);
 
-  
+  // Scroll to Contact section
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div>
-      
       <NavbarDemo scrollToContact={scrollToContact} />
-      <Hero />
+      <Hero scrollToContact={scrollToContact} />
       <AuroraHero />
       <ThreeDCard />
       <Writing />
-      
+      <ModeToggle />
       <Contact ref={contactRef} />
     </div>
   );

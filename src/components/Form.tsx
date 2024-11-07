@@ -74,7 +74,7 @@ export function ThreeDCard() {
   
 
   return (
-    <div className="bg-neutral-600 flex flex-wrap justify-center shadow-lg shadow-gray-500">
+    <div className="bg-neutral-600 text-black flex flex-wrap justify-center shadow-lg shadow-gray-500">
       <CardContainer className="inter-var">
         <CardBody className="bg-gray-50 relative group/card dark:bg-gray-100 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-10 border">
           <h1 className="font-bold text-black py-5">
