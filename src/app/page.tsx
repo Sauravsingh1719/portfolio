@@ -4,7 +4,7 @@ import Contact from '@/components/Contact';
 import { Hero } from '@/components/Hero';
 import { ThreeDCard } from '@/components/ThreeDCard';
 import { Writing } from '@/components/Writing';
-import { NavbarDemo } from '@/components/Navbar'; // Import the updated Navbar
+import { NavbarDemo } from '@/components/Navbar';
 import React, { useRef } from 'react';
 
 const Page = () => {
@@ -18,13 +18,13 @@ const Page = () => {
 
   return (
     <div>
-      {/* Pass the scrollToContact function to NavbarDemo */}
+      
       <NavbarDemo scrollToContact={scrollToContact} />
       <Hero />
       <AuroraHero />
       <ThreeDCard />
       <Writing />
-      {/* Pass the contactRef to the Contact component */}
+      
       <Contact ref={contactRef} />
     </div>
   );

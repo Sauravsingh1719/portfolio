@@ -39,7 +39,7 @@ export const Writing = () => {
           />
           <Link
             heading="IN THE GAME, I FIND ME"
-            subheading="Discovering Inner Clarity and Strength: How Sports Help Us Find Ourselves Amid Life’s Chaos "
+            subheading="Discovering Inner Clarity and Strength: How Sports Help Us Find Ourselves Amid Life’s Chaos"
             imgSrc="/images/writing/2.png"
             href="https://medium.com/@sauravs1719/in-the-game-i-find-me-ac4ab3436457"
           />
@@ -101,18 +101,25 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
           }}
           className="relative z-10 block text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl"
         >
-          {heading.split("").map((l, i) => (
-            <motion.span
-              variants={{
-                initial: { x: 0 },
-                whileHover: { x: 16 },
-              }}
-              transition={{ type: "spring" }}
-              className="inline-block"
-              key={i}
-            >
-              {l}
-            </motion.span>
+          {/* Split heading by spaces, and then by characters for each word */}
+          {heading.split(" ").map((word, wordIndex) => (
+            <span key={wordIndex} className="inline-block">
+              {word.split("").map((char, charIndex) => (
+                <motion.span
+                  key={charIndex}
+                  variants={{
+                    initial: { x: 0 },
+                    whileHover: { x: 16 },
+                  }}
+                  transition={{ type: "spring" }}
+                  className="inline-block"
+                >
+                  {char}
+                </motion.span>
+              ))}
+              {/* Add a space after each word */}
+              &nbsp;
+            </span>
           ))}
         </motion.span>
         <span className="relative z-10 mt-2 block text-base text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50">
