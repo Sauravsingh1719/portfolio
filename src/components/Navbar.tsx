@@ -26,21 +26,21 @@
             <div className="text-sm grid grid-cols-1 gap-1 p-2">
               <ProductItem
                 title="Old Portfolio"
-                href="https://algochurn.com"
+                href="https://saurav160.netlify.app/"
                 src="/images/portfolio.png"
-                description="Prepare for tech interviews like never before."
+                description="My First Portfolio Project"
               />
               <ProductItem
                 title="Data to grow"
-                href="https://tailwindmasterkit.com"
+                href="https://dtg-five.vercel.app/"
                 src="/images/dtg.png"
-                description="Production ready Tailwind css components for your next project."
+                description="Data to Grow Website"
               />
               <ProductItem
                 title="The Fitness Centre"
-                href="https://gomoonbeam.com"
+                href="https://tfc1.netlify.app/"
                 src="/images/gym.png"
-                description="Never write from scratch again. Go from idea to blog in minutes."
+                description="Stunning responsive website for the fitness center"
               />
             </div>
           </MenuItem>
