@@ -77,7 +77,7 @@ export function ThreeDCard() {
     <div className="bg-neutral-600 text-black flex flex-wrap justify-center shadow-lg shadow-gray-500">
       <CardContainer className="inter-var">
         <CardBody className="bg-gray-50 relative group/card dark:bg-gray-100 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-10 border">
-          <h1 className="font-bold text-black py-5">
+          <h1 className="font-bold text-black py-5 flex flex-wrap">
             Have an idea or a project in mind? Drop me a message, and let's connect to bring it to life!
           </h1>
           <Form {...form}>
@@ -122,7 +122,7 @@ export function ThreeDCard() {
                 />
               </CardItem>
 
-              <CardItem translateZ="70">
+              <CardItem translateZ="60">
                 <FormField
                   control={form.control}
                   name="phone"
@@ -133,6 +133,7 @@ export function ThreeDCard() {
                         <Input
                           placeholder="Enter your Phone Number"
                           {...field}
+                          type="number"
                           className="w-full sm:w-96 px-3 py-2 border rounded-lg"
                         />
                       </FormControl>
@@ -142,7 +143,7 @@ export function ThreeDCard() {
                 />
               </CardItem>
 
-              <CardItem translateZ="80">
+              <CardItem translateZ="60">
                 <FormField
                   control={form.control}
                   name="message"
@@ -162,7 +163,7 @@ export function ThreeDCard() {
                   )}
                 />
               </CardItem>
-
+            <CardItem translateZ="60">
               <button
                 type="submit"
                 className="bg-black text-white px-4 py-2 rounded"
@@ -170,6 +171,7 @@ export function ThreeDCard() {
               >
                 {loading ? "Sending..." : "Contact"}
               </button>
+              </CardItem>
             </form>
           </Form>
           <ToastContainer toasts={toasts} removeToast={removeToast} />

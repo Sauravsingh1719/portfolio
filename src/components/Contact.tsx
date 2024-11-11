@@ -19,11 +19,11 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
         </motion.h1>
       </div>
       <div className='flex items-center justify-center px-10'>
-        <div className='grid grid-cols-12 gap-4'>
-          <div className='col-span-12 md:col-span-5 lg:col-span-5'>
+        <div className='grid grid-cols-12 gap-6'>
+          <div className='col-span-12 md:col-span-5 lg:col-span-7'>
             <RevealLinks />
           </div>
-          <div className='col-span-12 md:col-span-6 lg:col-span-6 shadow-lg shadow-white rounded-md flex items-center'>
+          <div className='col-span-12 md:col-span-6 lg:col-span-4 rounded-md flex items-center'>
             <ThreeDCard />
           </div>
         </div>
