@@ -74,18 +74,20 @@ export const Hero = ({ scrollToContact }: HeroProps) => {
       {/* Buttons animation from the bottom corners */}
       <div className="flex flex-row gap-5">
         {/* Download CV button from bottom left */}
-        <motion.button
-          initial={{ x: -100, y: 100, opacity: 0 }}
-          animate={{ x: 0, y: 0, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8, ease: "easeInOut" }}
-          style={{ border, boxShadow }}
-          whileHover={{ scale: 1.015 }}
-          whileTap={{ scale: 0.985 }}
-          className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
-        >
-          Download CV
-          <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-        </motion.button>
+        <a href="/Resume.pdf" download>
+          <motion.button
+            initial={{ x: -100, y: 100, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ delay: 1, duration: 0.8, ease: "easeInOut" }}
+            style={{ border, boxShadow }}
+            whileHover={{ scale: 1.015 }}
+            whileTap={{ scale: 0.985 }}
+            className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+          >
+            Download CV
+            <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+          </motion.button>
+        </a>
 
         {/* Hire Me button from bottom right with scroll */}
         <motion.button
