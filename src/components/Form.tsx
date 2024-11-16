@@ -169,7 +169,15 @@ export function ThreeDCard() {
                 className="bg-black text-white px-4 py-2 rounded"
                 disabled={loading}
               >
-                {loading ? "Sending..." : "Contact"}
+                {loading ? (
+      <img
+        src="/images/rocket.gif" // Make sure you have this GIF in your public/images folder
+        alt="Loading..."
+        className="h-6 w-6"
+      />
+    ) : (
+      "Contact"
+    )}
               </button>
               </CardItem>
             </form>
