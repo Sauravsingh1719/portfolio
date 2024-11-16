@@ -39,7 +39,7 @@ export function ThreeDCard() {
   });
 
   const onSubmit = async (data: any, e: React.FormEvent) => {
-    e.preventDefault(); // Ensures no default form action
+    e.preventDefault();
     setLoading(true);
     try {
       const response = await fetch("/api/send-email", {
@@ -74,27 +74,26 @@ export function ThreeDCard() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden"> {/* Added overflow-hidden */}
       {/* Overlay for Loading State */}
       {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-opacity-30 backdrop-blur-md z-50">
+        <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 backdrop-blur-lg z-50">
           <img
-            src="/images/rocket.gif"
+            src="/images/loading.gif"
             alt="Loading..."
-            className="h-64 w-64"
+            className="h-16 w-16"
           />
         </div>
       )}
 
       <div className="bg-neutral-600 text-black flex flex-wrap justify-center shadow-lg shadow-gray-500 relative">
         <CardContainer className="inter-var">
-          <CardBody className="bg-gray-50 relative group/card dark:bg-gray-100 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-10 border">
+          <CardBody className="bg-gray-50 dark:bg-gray-100 relative group/card border dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-10">
             <h1 className="font-bold text-black py-5 flex flex-wrap">
-              Have an idea or a project in mind? Drop me a message, and let's
-              connect to bring it to life!
+              Have an idea or a project in mind? Drop me a message, and let's connect to bring it to life!
             </h1>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <CardItem translateZ="50">
                   <FormField
                     control={form.control}
@@ -181,14 +180,10 @@ export function ThreeDCard() {
                     type="submit"
                     className={`${
                       loading ? "bg-white text-black" : "bg-black text-white"
-                    }rounded flex items-center justify-center`}
+                    } px-4 py-2 rounded flex items-center justify-center`}
                     disabled={loading}
                   >
-                    {loading ? (
-                      "Sending..."
-                    ) : (
-                      "Contact"
-                    )}
+                    {loading ? "Sending..." : "Contact"}
                   </button>
                 </CardItem>
               </form>
