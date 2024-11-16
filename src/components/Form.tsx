@@ -77,11 +77,11 @@ export function ThreeDCard() {
     <div className="relative">
       {/* Overlay for Loading State */}
       {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 backdrop-blur-md z-50">
+        <div className="absolute inset-0 flex items-center justify-center bg-opacity-30 backdrop-blur-md z-50">
           <img
             src="/images/rocket.gif"
             alt="Loading..."
-            className="h-16 w-16"
+            className="h-64 w-64"
           />
         </div>
       )}
@@ -181,7 +181,7 @@ export function ThreeDCard() {
                     type="submit"
                     className={`${
                       loading ? "bg-white text-black" : "bg-black text-white"
-                    } px-4 py-2 rounded flex items-center justify-center`}
+                    }rounded flex items-center justify-center`}
                     disabled={loading}
                   >
                     {loading ? (
