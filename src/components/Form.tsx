@@ -76,15 +76,7 @@ export function ThreeDCard() {
   return (
     <div className="relative overflow-hidden"> {/* Added overflow-hidden */}
       {/* Overlay for Loading State */}
-      {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 backdrop-blur-lg z-50">
-          <img
-            src="/images/loading.gif"
-            alt="Loading..."
-            className="h-16 w-16"
-          />
-        </div>
-      )}
+      
 
       <div className="bg-neutral-600 text-black flex flex-wrap justify-center shadow-lg shadow-gray-500 relative">
         <CardContainer className="inter-var">
@@ -92,6 +84,15 @@ export function ThreeDCard() {
             <h1 className="font-bold text-black py-5 flex flex-wrap">
               Have an idea or a project in mind? Drop me a message, and let's connect to bring it to life!
             </h1>
+{loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 backdrop-blur-lg z-50">
+          <img
+            src="/images/rocket.gif"
+            alt="Loading..."
+            className="h-64 w-64"
+          />
+        </div>
+      )}
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <CardItem translateZ="50">
