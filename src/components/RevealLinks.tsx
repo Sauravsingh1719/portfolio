@@ -5,7 +5,7 @@ export const RevealLinks = () => {
   return (
     <section className="grid place-content-center gap-2 bg-green-300 px-8 text-white h-full w-full">
       <FlipLink href="#">X</FlipLink>
-      <FlipLink href="www.linkedin.com/in/saurav-kumar-262219337">Linkedin</FlipLink>
+      <FlipLink href="https://www.linkedin.com/in/saurav-kumar-262219337/">Linkedin</FlipLink>
       <FlipLink href="https://github.com/Sauravsingh1719">Github</FlipLink>
       <FlipLink href="#">Instagram</FlipLink>
       <FlipLink href="https://medium.com/@sauravs1719">Medium</FlipLink>
