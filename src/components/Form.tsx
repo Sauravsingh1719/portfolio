@@ -49,7 +49,7 @@ export function ThreeDCard() {
         },
         body: JSON.stringify(data),
       });
-  
+
       if (response.ok) {
         form.reset();
         toast({
@@ -64,127 +64,139 @@ export function ThreeDCard() {
       console.error("Error:", error);
       toast({
         title: "Error!",
-        description: "There was an error sending your message. Please try again.",
+        description:
+          "There was an error sending your message. Please try again.",
         type: "error",
       });
     } finally {
       setLoading(false);
     }
   };
-  
 
   return (
-    <div className="bg-neutral-600 text-black flex flex-wrap justify-center shadow-lg shadow-gray-500">
-      <CardContainer className="inter-var">
-        <CardBody className="bg-gray-50 relative group/card dark:bg-gray-100 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-10 border">
-          <h1 className="font-bold text-black py-5 flex flex-wrap">
-            Have an idea or a project in mind? Drop me a message, and let's connect to bring it to life!
-          </h1>
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
-              <CardItem translateZ="50">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="Enter your Name"
-                          {...field}
-                          className="w-full sm:w-96 px-3 py-2 border rounded-lg"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </CardItem>
+    <div className="relative">
+      {/* Overlay for Loading State */}
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 backdrop-blur-md z-50">
+          <img
+            src="/images/rocket.gif"
+            alt="Loading..."
+            className="h-16 w-16"
+          />
+        </div>
+      )}
 
-              <CardItem translateZ="60">
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="Enter your Email"
-                          {...field}
-                          className="w-full sm:w-96 px-3 py-2 border rounded-lg"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </CardItem>
+      <div className="bg-neutral-600 text-black flex flex-wrap justify-center shadow-lg shadow-gray-500 relative">
+        <CardContainer className="inter-var">
+          <CardBody className="bg-gray-50 relative group/card dark:bg-gray-100 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-10 border">
+            <h1 className="font-bold text-black py-5 flex flex-wrap">
+              Have an idea or a project in mind? Drop me a message, and let's
+              connect to bring it to life!
+            </h1>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+                <CardItem translateZ="50">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Name</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Enter your Name"
+                            {...field}
+                            className="w-full sm:w-96 px-3 py-2 border rounded-lg"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </CardItem>
 
-              <CardItem translateZ="60">
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Phone Number</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="Enter your Phone Number"
-                          {...field}
-                          type="number"
-                          className="w-full sm:w-96 px-3 py-2 border rounded-lg"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </CardItem>
+                <CardItem translateZ="60">
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Enter your Email"
+                            {...field}
+                            className="w-full sm:w-96 px-3 py-2 border rounded-lg"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </CardItem>
 
-              <CardItem translateZ="60">
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Enter your Message"
-                          rows={4}
-                          {...field}
-                          className="w-full sm:w-96 px-3 py-2 border rounded-lg"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </CardItem>
-            <CardItem translateZ="60">
-              <button
-                type="submit"
-                className="bg-black text-white px-4 py-2 rounded"
-                disabled={loading}
-              >
-                {loading ? (
-      <img
-        src="/images/rocket.gif" // Make sure you have this GIF in your public/images folder
-        alt="Loading..."
-        className="h-6 w-6"
-      />
-    ) : (
-      "Contact"
-    )}
-              </button>
-              </CardItem>
-            </form>
-          </Form>
-          <ToastContainer toasts={toasts} removeToast={removeToast} />
-        </CardBody>
-      </CardContainer>
+                <CardItem translateZ="60">
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Phone Number</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Enter your Phone Number"
+                            {...field}
+                            type="number"
+                            className="w-full sm:w-96 px-3 py-2 border rounded-lg"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </CardItem>
+
+                <CardItem translateZ="60">
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Enter your Message"
+                            rows={4}
+                            {...field}
+                            className="w-full sm:w-96 px-3 py-2 border rounded-lg"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </CardItem>
+                <CardItem translateZ="60">
+                  <button
+                    type="submit"
+                    className={`${
+                      loading ? "bg-white text-black" : "bg-black text-white"
+                    } px-4 py-2 rounded flex items-center justify-center`}
+                    disabled={loading}
+                  >
+                    {loading ? (
+                      "Sending..."
+                    ) : (
+                      "Contact"
+                    )}
+                  </button>
+                </CardItem>
+              </form>
+            </Form>
+            <ToastContainer toasts={toasts} removeToast={removeToast} />
+          </CardBody>
+        </CardContainer>
+      </div>
     </div>
   );
 }
