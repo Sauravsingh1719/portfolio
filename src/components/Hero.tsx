@@ -42,7 +42,7 @@ export const Hero = ({ scrollToContact }: HeroProps) => {
           whileTap={{ scale: 0.9 }}
           className="inline-block bg-clip-text text-transparent"
           style={{
-            backgroundImage: "linear-gradient(to right, #13FFAA, #1E67C6)", // Adjust the gradient colors here
+            backgroundImage: "linear-gradient(to right, #13FFAA, #1E67C6)",
           }}
         >
           Saurav
@@ -63,8 +63,10 @@ export const Hero = ({ scrollToContact }: HeroProps) => {
         initial={{ x: -200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.8, ease: "easeInOut" }}
-        className="my-8 max-w-xl text-center text-white font-4xl font-medium leading-relaxed md:text-lg md:leading-relaxed"
-      >
+        className="my-8 max-w-xl text-center text-white font-4xl font-medium leading-relaxed md:text-lg md:leading-relaxed">
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Protest+Riot&display=swap');
+</style>
         As a passionate full-stack web developer, I turn ideas into interactive,
         scalable web applications. Whether it's creating seamless user experiences
         or building robust backend systems, I'm excited to share my journey, projects,
