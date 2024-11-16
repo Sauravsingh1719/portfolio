@@ -43,6 +43,12 @@ export const Writing = () => {
             imgSrc="/images/writing/2.png"
             href="https://medium.com/@sauravs1719/in-the-game-i-find-me-ac4ab3436457"
           />
+          <Link
+            heading="The True Wealth"
+            subheading="A reflection on how mental peace is the true wealth, urging us to prioritize inner calm over material desires."
+            imgSrc="https://miro.medium.com/v2/resize:fit:720/format:webp/1*az2THrjI-yu0ysNYdJVmmQ.jpeg"
+            href="https://medium.com/@sauravs1719/the-true-wealth-beyond-money-and-materialism-15040d30b179"
+          />
         </div>
       </section>
     </div>
