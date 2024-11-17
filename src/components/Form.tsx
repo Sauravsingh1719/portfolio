@@ -39,7 +39,7 @@ export function ThreeDCard() {
   });
 
   const onSubmit = async (data: any, e: React.FormEvent) => {
-    e.preventDefault(); // Ensures no default form action
+    e.preventDefault();
     setLoading(true);
     try {
       const response = await fetch("/api/send-email", {
@@ -49,7 +49,7 @@ export function ThreeDCard() {
         },
         body: JSON.stringify(data),
       });
-  
+
       if (response.ok) {
         form.reset();
         toast({
@@ -64,14 +64,14 @@ export function ThreeDCard() {
       console.error("Error:", error);
       toast({
         title: "Error!",
-        description: "There was an error sending your message. Please try again.",
+        description:
+          "There was an error sending your message. Please try again.",
         type: "error",
       });
     } finally {
       setLoading(false);
     }
   };
-  
 
   return (
     <div className="bg-neutral-600 text-black flex flex-wrap justify-center shadow-lg shadow-gray-500">
