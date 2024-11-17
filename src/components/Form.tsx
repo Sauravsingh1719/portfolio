@@ -78,8 +78,13 @@ export function ThreeDCard() {
       <CardContainer className="inter-var">
         <CardBody className="bg-gray-50 relative group/card dark:bg-gray-100 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-10 border">
           <h1 className="font-bold text-black py-5">
-            Have an idea or a project in mind? Drop me a message, and let's connect to bring it to life!
+            Have an idea or a project in mind? Drop me a message,<br></br> and let's connect to bring it to life!
           </h1>
+          {loading ? (
+  <div className="flex justify-center items-center h-64">
+    <img src="images/rocket.gif" alt="Loading..." className="w-64 h-64" />
+  </div>
+) : (
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
               <CardItem translateZ="50">
@@ -102,7 +107,7 @@ export function ThreeDCard() {
                 />
               </CardItem>
 
-              <CardItem translateZ="60">
+              <CardItem translateZ="50">
                 <FormField
                   control={form.control}
                   name="email"
@@ -122,7 +127,7 @@ export function ThreeDCard() {
                 />
               </CardItem>
 
-              <CardItem translateZ="70">
+              <CardItem translateZ="50">
                 <FormField
                   control={form.control}
                   name="phone"
@@ -142,7 +147,7 @@ export function ThreeDCard() {
                 />
               </CardItem>
 
-              <CardItem translateZ="80">
+              <CardItem translateZ="50">
                 <FormField
                   control={form.control}
                   name="message"
@@ -162,7 +167,7 @@ export function ThreeDCard() {
                   )}
                 />
               </CardItem>
-
+              <CardItem translateZ="50">
               <button
                 type="submit"
                 className="bg-black text-white px-4 py-2 rounded"
@@ -170,8 +175,10 @@ export function ThreeDCard() {
               >
                 {loading ? "Sending..." : "Contact"}
               </button>
+              </CardItem>
             </form>
           </Form>
+)}
           <ToastContainer toasts={toasts} removeToast={removeToast} />
         </CardBody>
       </CardContainer>

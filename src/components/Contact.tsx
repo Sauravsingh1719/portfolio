@@ -18,7 +18,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
           Contact
         </motion.h1>
       </div>
-      <div className='flex items-center justify-center px-10'>
+      <div className='flex items-center justify-center px-10 lg:px-[20%] md:px-20 sm:px-10'>
         <div className='grid grid-cols-12 gap-4'>
           <div className='col-span-12 md:col-span-5 lg:col-span-5'>
             <RevealLinks />
