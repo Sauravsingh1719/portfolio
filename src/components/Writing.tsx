@@ -52,7 +52,7 @@ export const Writing = () => {
 <Link
             heading="From holding on to letting go"
             subheading="The Hard Truth About Humanity and Emotions"
-            imgSrc="/images/writing/3.png"
+            imgSrc="https://miro.medium.com/v2/resize:fit:828/format:webp/1*CARIruwdpf7F-P7MXfRznQ.jpeg"
             href="https://medium.com/@sauravs1719/from-holding-on-to-letting-go-d660f4f0ac27"
           />
         </div>
