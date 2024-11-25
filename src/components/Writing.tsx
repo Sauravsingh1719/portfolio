@@ -49,6 +49,12 @@ export const Writing = () => {
             imgSrc="https://miro.medium.com/v2/resize:fit:720/format:webp/1*az2THrjI-yu0ysNYdJVmmQ.jpeg"
             href="https://medium.com/@sauravs1719/the-true-wealth-beyond-money-and-materialism-15040d30b179"
           />
+<Link
+            heading="From holding on to letting go"
+            subheading="The Hard Truth About Humanity and Emotions"
+            imgSrc="https://miro.medium.com/v2/resize:fit:828/format:webp/1*CARIruwdpf7F-P7MXfRznQ.jpeg"
+            href="https://medium.com/@sauravs1719/from-holding-on-to-letting-go-d660f4f0ac27"
+          />
         </div>
       </section>
     </div>

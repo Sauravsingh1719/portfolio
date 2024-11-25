@@ -7,6 +7,7 @@ import { Writing } from '@/components/Writing';
 import { NavbarDemo } from '@/components/Navbar';
 import React, { useRef } from 'react';
 import { ModeToggle } from '@/components/Theme';
+import { SkillsProgress } from '@/components/Skills';
 
 const Page = () => {
   // Create a ref for the Contact section
@@ -22,6 +23,7 @@ const Page = () => {
       <NavbarDemo scrollToContact={scrollToContact} />
       <Hero scrollToContact={scrollToContact} />
       <AuroraHero />
+      <SkillsProgress />
       <ThreeDCard />
       <Writing />
       <ModeToggle />
